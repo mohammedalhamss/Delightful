@@ -719,8 +719,15 @@ section {
 }
 
 .icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 28px;
+    color: #2c3e50; /* professional dark tone */
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
 /* ------------------------------ */

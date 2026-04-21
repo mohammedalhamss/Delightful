@@ -1207,6 +1207,35 @@ section {
     font-size: 1.2rem;
 }
 
+.card-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: rgba(31, 58, 95, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon i {
+    font-size: 24px;
+    color: #000000;
+}
+
+.gallery-item {
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
 /* ===== CTA Section ===== */
 .cta-section {
     background: linear-gradient(135deg, var(--black) 0%, #ff8e00 100%);
