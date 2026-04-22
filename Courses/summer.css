@@ -1,4 +1,5 @@
 /* Reset and Base Styles */
+
 :root {
     --primary-color: #107f7f;
     --primary-dark: #2d6160;
@@ -10,13 +11,13 @@
     --gray-300: #dee2e6;
     --gray-700: #495057;
     --gray-900: #212529;
-    
     --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --transition-speed: 0.3s;
     --border-radius: 12px;
     --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     --box-shadow-hover: 0 15px 40px rgba(22, 209, 206, 0.6);
 }
+
 
 /* CSS Variables for Colors */
 
@@ -129,107 +130,61 @@
    ============================================ */
 
 .dropdown {
-  position: relative;
+    position: relative;
 }
+
 
 /* Dropdown container */
+
 .dropdown-menu {
-  position: absolute;
-  top: 100%;              /* ✅ remove the 5px gap */
-  left: 0;
-  margin-top: 5px;        /* ✅ visual spacing WITHOUT breaking hover */
-  background: white;
-  border-radius: 6px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  white-space: nowrap;
-  z-index: 2000;
-
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  /* ✅ smooth, but no delay */
-  transition: opacity 0.18s ease, visibility 0s linear 0.18s;
+    position: absolute;
+    top: 100%;
+    /* ✅ remove the 5px gap */
+    left: 0;
+    margin-top: 5px;
+    /* ✅ visual spacing WITHOUT breaking hover */
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    white-space: nowrap;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    /* ✅ smooth, but no delay */
+    transition: opacity 0.18s ease, visibility 0s linear 0.18s;
 }
+
 
 /* Show dropdown on hover */
+
 .dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu { /* ✅ also works for keyboard/click */
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transition: opacity 0.18s ease, visibility 0s linear 0s;
+.dropdown:focus-within .dropdown-menu {
+    /* ✅ also works for keyboard/click */
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.18s ease, visibility 0s linear 0s;
 }
+
 
 /* Dropdown links */
+
 .dropdown-menu a {
-  font-size: 0.85rem;
-  color: #111;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 6px 15px;
-  position: relative;
+    font-size: 0.85rem;
+    color: #111;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 15px;
+    position: relative;
 }
+
 
 /* hover underline */
-.dropdown-menu a::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #ebbc00;
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  transition: 0.3s;
-}
 
-.dropdown-menu a:hover::after {
-  width: 100%;
-}
-
-.dropdown-menu::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -8px;      /* bridge area above the menu */
-  height: 8px;
-}
-
-.dropdown-menu .apply-btn1{
-  display:block;
-  width:100%;
-  background:#ebbc00;
-  color:#fff !important;
-  padding:8px 15px;
-  position:relative;
-}
-
-.dropdown-menu .apply-btn1::after{
-  content:'';
-  position:absolute;
-  width:0%;
-  height:2px;
-  background:white;
-  left:0;
-  bottom:2px;
-  transition:0.3s ease;
-}
-
-.dropdown-menu .apply-btn1:hover::after{
-  width:100%;
-}
-
-.dropdown-menu .apply-btn1:hover{
-  background:#ebbc00;
-  color:#fff !important;
-}
-
-/* hover underline */
 .dropdown-menu a::after {
     content: "";
     width: 0%;
@@ -240,6 +195,65 @@
     bottom: -3px;
     transition: 0.3s;
 }
+
+.dropdown-menu a:hover::after {
+    width: 100%;
+}
+
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -8px;
+    /* bridge area above the menu */
+    height: 8px;
+}
+
+.dropdown-menu .apply-btn1 {
+    display: block;
+    width: 100%;
+    background: #ebbc00;
+    color: #fff !important;
+    padding: 8px 15px;
+    position: relative;
+}
+
+.dropdown-menu .apply-btn1::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: 2px;
+    transition: 0.3s ease;
+}
+
+.dropdown-menu .apply-btn1:hover::after {
+    width: 100%;
+}
+
+.dropdown-menu .apply-btn1:hover {
+    background: #ebbc00;
+    color: #fff !important;
+}
+
+
+/* hover underline */
+
+.dropdown-menu a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #ebbc00;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s;
+}
+
+
 /* ------------------------------ */
 
 
@@ -561,12 +575,16 @@ body {
 /* Course title - updated for better contrast on yellow */
 
 .course-title {
-    color: #5A1F8E;
-    /* Dark purple text */
+    color: var(--white);
     font-size: 1.5rem;
     margin-bottom: 12px;
     line-height: 1.4;
     font-weight: 700;
+    /* 👇 ADD THESE 3 LINES 👇 */
+    min-height: 2.8em;
+    display: flex;
+    align-items: center;
+    /* This ensures single-line titles are vertically centered */
 }
 
 .course-body {
@@ -1174,6 +1192,15 @@ body {
     color: #003f7d!important;
 }
 
+.faculty-nav-item.architecture.active {
+    border-bottom-color: #2c3e50;
+    /* Example dark slate color */
+}
+
+.faculty-icon.faculty-architecture {
+    background-color: #2c3e50;
+}
+
 .faculty-icon.faculty-fine-arts i {
     color: #ffd800!important;
 }
@@ -1183,144 +1210,164 @@ body {
 }
 
 .site-footer {
-  background: #0c1220 !important;
-  color: #d7ddff !important;
-  padding: 0;
+    background: #0c1220 !important;
+    color: #d7ddff !important;
+    padding: 0;
 }
+
 
 /* make sure footer container doesn't stretch weirdly */
+
 .site-footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
 }
+
 
 /* TOP SECTION */
+
 .site-footer .footer-top {
-  padding: 56px 0 34px !important;
+    padding: 56px 0 34px !important;
 }
+
 
 /* Kill any "row" flex overrides and use grid for clean columns */
+
 .site-footer .footer-top .row {
-  display: grid !important;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 34px !important;
-  align-items: start !important;
-  margin: 0 !important;
+    display: grid !important;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 34px !important;
+    align-items: start !important;
+    margin: 0 !important;
 }
+
 
 /* neutralize bootstrap column sizing/margins that might be broken */
+
 .site-footer .footer-col {
-  margin: 0 !important;
-  padding: 0 !important;
-  min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 0;
 }
+
 
 /* HEADINGS */
+
 .site-footer h4 {
-  margin: 0 0 14px !important;
-  color: #ffffff !important;
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.2px;
+    margin: 0 0 14px !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2px;
 }
+
 
 /* ABOUT TEXT */
+
 .site-footer .about p {
-  margin: 0 !important;
-  color: rgba(215, 221, 255, 0.82) !important;
-  font-size: 14px !important;
-  line-height: 1.75 !important;
-  max-width: 42ch;
+    margin: 0 !important;
+    color: rgba(215, 221, 255, 0.82) !important;
+    font-size: 14px !important;
+    line-height: 1.75 !important;
+    max-width: 42ch;
 }
 
+
 /* LINKS */
+
 .site-footer .links ul {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .site-footer .links li {
-  margin: 0 0 10px !important;
+    margin: 0 0 10px !important;
 }
 
 .site-footer .links a {
-  color: rgba(215, 221, 255, 0.88) !important;
-  text-decoration: none !important;
-  font-size: 14px !important;
-  display: inline-flex;
-  gap: 8px;
-  transition: color 0.2s ease, transform 0.2s ease;
+    color: rgba(215, 221, 255, 0.88) !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    display: inline-flex;
+    gap: 8px;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .site-footer .links a:hover {
-  color: #aeb8ff !important;
-  transform: translateX(4px);
+    color: #aeb8ff !important;
+    transform: translateX(4px);
 }
+
 
 /* CONTACT */
+
 .site-footer .contact p {
-  margin: 0 0 10px !important;
-  font-size: 14px !important;
-  color: rgba(215, 221, 255, 0.88) !important;
+    margin: 0 0 10px !important;
+    font-size: 14px !important;
+    color: rgba(215, 221, 255, 0.88) !important;
 }
 
+
 /* SOCIALS */
+
 .site-footer .footer-socials {
-  display: flex !important;
-  gap: 12px !important;
-  margin-top: 14px !important;
+    display: flex !important;
+    gap: 12px !important;
+    margin-top: 14px !important;
 }
 
 .site-footer .footer-social {
-  width: 42px !important;
-  height: 42px !important;
-  border-radius: 14px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  background: rgba(255, 255, 255, 0.07) !important;
-  border: 1px solid rgba(255, 255, 255, 0.10) !important;
-
-  text-decoration: none !important;
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.10) !important;
+    text-decoration: none !important;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .site-footer .footer-social i {
-  color: #ffffff !important;
-  font-size: 20px !important;
-  line-height: 1 !important;
-  opacity: 0.95;
+    color: #ffffff !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    opacity: 0.95;
 }
 
 .site-footer .footer-social:hover {
-  transform: translateY(-3px);
-  background: rgba(174, 184, 255, 0.16) !important;
-  border-color: rgba(174, 184, 255, 0.28) !important;
+    transform: translateY(-3px);
+    background: rgba(174, 184, 255, 0.16) !important;
+    border-color: rgba(174, 184, 255, 0.28) !important;
 }
 
+
 /* BOTTOM SECTION */
+
 .site-footer .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.10) !important;
-  padding: 18px 0 22px !important;
-  text-align: center !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.10) !important;
+    padding: 18px 0 22px !important;
+    text-align: center !important;
 }
 
 .site-footer .footer-bottom p {
-  margin: 6px 0 !important;
-  font-size: 13px !important;
-  color: rgba(215, 221, 255, 0.70) !important;
+    margin: 6px 0 !important;
+    font-size: 13px !important;
+    color: rgba(215, 221, 255, 0.70) !important;
 }
 
+
 /* RESPONSIVE */
+
 @media (max-width: 900px) {
-  .site-footer .footer-top .row {
-    grid-template-columns: 1fr !important;
-    gap: 22px !important;
-  }
+    .site-footer .footer-top .row {
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+    }
 }
 
 .cbtn {
@@ -1383,7 +1430,9 @@ body {
     font-size: 1.2rem;
 }
 
+
 /* ===== CTA Section ===== */
+
 .cta-section {
     background: linear-gradient(135deg, var(--black) 0%, #ebbc00 100%);
     color: var(--white);

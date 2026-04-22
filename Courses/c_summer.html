@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="summer.css">
     <link rel="icon" type="image/png" href="../imgs/logo.png">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -121,6 +121,10 @@
                 <li class="faculty-nav-item engineering" data-faculty="engineering">
                     <i class="fas fa-cogs faculty-nav-icon"></i>
                     <span>Engineering</span>
+                </li>
+                <li class="faculty-nav-item architecture" data-faculty="architecture">
+                    <i class="fas fa-city faculty-nav-icon"></i>
+                    <span>Architecture & Design</span>
                 </li>
                 <li class="faculty-nav-item fine-arts" data-faculty="fine-arts">
                     <i class="fas fa-palette faculty-nav-icon"></i>
@@ -289,6 +293,42 @@
                             <button class="btn btn-primary" onclick="enrollCourse('multi-criteria-decision')">
                                     <i class="fas fa-user-plus"></i> Enroll Now
                                 </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faculty-architecture" class="faculty-section">
+            <div class="faculty-header">
+                <div class="faculty-icon faculty-architecture" style="background-color: #2c3e50; color: white;">
+                    <i class="fas fa-pencil-ruler"></i>
+                </div>
+                <h2>Faculty of Architecture and Design</h2>
+                <span class="faculty-count">1 Course</span>
+            </div>
+
+            <div class="courses-grid" id="architecture-courses">
+                <div class="course-card" data-ects="6" data-seats="20">
+                    <div class="course-badge">6 ECTS</div>
+                    <div class="course-header">
+                        <span class="course-faculty">Architecture (ARC360)</span>
+                        <h3 class="course-title">Istanbul as a Living Laboratory: Urban Analysis & Architectural Mapping</h3>
+                    </div>
+                    <div class="course-body">
+                        <p class="course-description">
+                            Treat Istanbul as a living laboratory. This intensive course introduces urban analysis and mapping as tools to interpret complex urban environments through field walks, site-based observations, and diagrammatic studies.
+                        </p>
+
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-actions">
+                            <button class="btn btn-secondary" onclick="viewCourseDetails('arc360')">
+                        <i class="fas fa-info-circle"></i> Full Details
+                    </button>
+                            <button class="btn btn-primary" onclick="enrollCourse('arc360')">
+                        <i class="fas fa-user-plus"></i> Enroll Now
+                    </button>
                         </div>
                     </div>
                 </div>
@@ -470,9 +510,8 @@
                 <h2>Ready to Start Your Journey?</h2>
                 <p>Explore our accommodations and take the first step toward a comfortable and unforgettable living experience in Turkey.</p>
                 <div class="cta-buttons">
-                    <a href="../Accomodations/summer_acc/Accomodations.html" class="cbtn cbtn-primary cbtn-large" >Check Accommodations List</a>
-                    <a href="https://delightfulapp.aydin.edu.tr/?AppType=Winter" class="cbtn cbtn-secondary cbtn-large"
-                        target="_blank">Apply Now</a>
+                    <a href="../Accomodations/summer_acc/Accomodations.html" class="cbtn cbtn-primary cbtn-large">Check Accommodations List</a>
+                    <a href="https://delightfulapp.aydin.edu.tr/?AppType=Winter" class="cbtn cbtn-secondary cbtn-large" target="_blank">Apply Now</a>
                 </div>
             </div>
         </div>
@@ -485,16 +524,15 @@
                 <div class="col-md-4 footer-col about">
                     <h4 class="boldText">Istanbul Aydin University - Delightful Program</h4>
 
-                    <p>Delightful Istanbul – Your ultimate guide to discovering the wonders of Istanbul. Experience the
-                        magic where East meets West.</p>
+                    <p>Delightful Istanbul – Your ultimate guide to discovering the wonders of Istanbul. Experience the magic where East meets West.</p>
                 </div>
                 <div class="col-md-4 footer-col links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="../../winter/winter.html">Winter</a></li>
-                        <li><a href="../../spring/spring.html">Spring</a></li>
-                        <li><a href="../../summer/summer.html">Summer</a></li>
-                        <li><a href="../../summer/summer.html">Late Summer</a></li>
+                        <li><a href="winter/winter.html">Winter</a></li>
+                        <li><a href="spring/spring.html">Spring</a></li>
+                        <li><a href="summer/summer.html">Summer</a></li>
+                        <li><a href="summer/summer.html">Late Summer</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 footer-col contact">
@@ -502,10 +540,10 @@
                     <p>Email: info@delightfulistanbul.com</p>
                     <p>Phone: +90 123 456 7890</p>
                     <div class="footer-socials">
-                        <a href="https://www.facebook.com/delightful.istanbul?mibextid=ZbWKwL" target="_blank" class="footer-social footer-facebook">
+                        <a href="https://www.facebook.com" target="_blank" class="footer-social footer-facebook">
                             <i class="bi bi-facebook"></i>
                         </a>
-                        <a href="https://www.instagram.com/accounts/login/?next=%2Fdelightful.istanbul&source=omni_redirect" target="_blank" class="footer-social footer-instagram">
+                        <a href="https://www.instagram.com" target="_blank" class="footer-social footer-instagram">
                             <i class="bi bi-instagram"></i>
                         </a>
                     </div>
@@ -544,7 +582,7 @@
                 format: "Blended Online Mobility Erasmus+",
                 instructor: "Prof. Dr. Rembert Horstmann",
                 email: "r.horstmann@cbs.de",
-                avatar:"../imgs/Rembert.jpg",
+                avatar: "../imgs/Rembert.jpg",
                 biography: '<a href="#"><i class="fas fa-user"></i> View Biography</a>',
                 code: "BUS497",
                 maxParticipants: 30,
@@ -851,6 +889,64 @@ The course is designed in two parts which will provide students the opportunity 
                 maxParticipants: 20,
                 prerequisites: "Basic biology knowledge",
                 description: "Explore the complex workings of the nervous system. Study brain function, neural pathways, cognitive processes, and neurological disorders through both theoretical and practical approaches."
+            },
+            'arc360': {
+                title: "Reading the City: Urban Analysis and Architectural Mapping in Istanbul",
+                faculty: "Faculty of Architecture and Design",
+                department: "Architecture",
+                ects: 5, // Estimated based on similar courses in your list
+                format: "Intensive Summer Course / Field Study",
+                instructor: "Assist. Prof. Dr. Saba Matin",
+                email: "sabamatinaygoren@aydin.edu.tr",
+                avatar: "../imgs/Saba.jpg", // Placeholder path
+                biography: '<a href="#"><i class="fas fa-user"></i> View Biography</a>',
+                code: "ARC360",
+                maxParticipants: 20,
+                prerequisites: "No formal prerequisites (Basic familiarity with representation and urban spatial concepts is recommended)",
+                participants: "Architecture, Interior Architecture, Urban Design, Landscape Architecture, and City & Regional Planning students",
+                description: `Istanbul is not merely a city but a multilayered urban archive shaped by centuries of cultural, spatial, and social transformation. Its streets, buildings, and public spaces function as an open textbook where architectural ideas, urban patterns, and everyday life intersect. 
+
+    This intensive summer course treats Istanbul as a living laboratory, introducing students to urban analysis and architectural mapping as essential tools for reading and interpreting complex urban environments. Through lectures, guided urban walks, site-based observations, and diagrammatic studies, participants will explore how architectural form, movement, public space, and social activity interact within the city.`,
+                learningOutcomes: [
+                    "Explain fundamental concepts and theoretical frameworks of urban analysis and architectural mapping",
+                    "Analyze urban form, spatial organization, and public space through architectural criteria",
+                    "Interpret relationships between built form, movement, and social behavior in urban environments",
+                    "Apply site-based observation and field study methods to real urban contexts",
+                    "Produce analytical drawings, diagrams, and mappings to represent urban data",
+                    "Develop architectural narratives based on spatial, cultural, and morphological analysis",
+                    "Communicate urban and architectural analyses effectively through visual, verbal, and written presentations"
+                ],
+                curriculum: {
+                    "Week 1": {
+                        "Day 1": "Istanbul as a Living Laboratory: Introduction to Urban Analysis",
+                        "Day 2": "Urban Morphology and Spatial Layers: Field Observation & In-Class Discussion",
+                        "Day 3": "Architectural Mapping & Diagramming Techniques: Field-Based Analysis",
+                        "Day 4": "Urban Walk & Site Observation: Reading Public Space and Movement",
+                        "Day 5": "Analytical Mapping Workshop & Midterm Review: Processing Field Data"
+                    },
+                    "Week 2": {
+                        "Day 1": "Public Space, Movement, and Urban Life: Urban Walk & On-Site Analysis",
+                        "Day 2": "Cultural and Historical Layers of Istanbul: Field Observation & Mapping",
+                        "Day 3": "Translating Urban Data into Architectural Narratives: Studio + Field Synthesis",
+                        "Day 4": "Final Project Development & Studio Critique: Integrating Field Studies",
+                        "Day 5": "Wrap-Up, Final Presentations & Discussion: Reflecting on Field Experience"
+                    }
+                },
+                onlineComponent: "Project Presentations",
+                assessment: [{
+                    component: "Midterm Analytical Study",
+                    percentage: "30%"
+                }, {
+                    component: "Project-based Presentations",
+                    percentage: "20%"
+                }, {
+                    component: "Final Mapping Project & Presentations",
+                    percentage: "50%"
+                }],
+                materials: [
+                    "Lecture presentations (PPT), academic articles, maps, architectural drawings, visual references, and digital resources."
+                ],
+                disclaimer: "IAU reserves the right to cancel any of the courses if insufficient enrollment occurs (Less than 10 participants)"
             },
             'turkish-language': {
                 title: "Introduction To Turkish Language and Culture",
@@ -1196,6 +1292,9 @@ Week 1 and 2 classes will be held from Monday to Friday at determined times. In 
             });
         });
     </script>
+</body>
+
+</html>cript>
 </body>
 
 </html>
