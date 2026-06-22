@@ -8,8 +8,9 @@
     </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../Courses/winter.css">
+    <link rel="stylesheet" href="summer.css">
     <link rel="icon" type="image/png" href="../imgs/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -35,8 +36,7 @@
                         <a href="../Social-Acc/Social-w/WinterAcc.html">Social
                                 activity program</a>
                         <a href="../Fees/Fees-w/Fees.html">Fees</a>
-                        <a href="../Application/Winter/Winterapp.html">Apply
-                                Now!</a>
+                        <a href="../Application/Winter/Winterapp.html" class="apply-btn1">Apply Now!</a>
                     </div>
                 </li>
 
@@ -51,8 +51,7 @@
                         <a href="../Social-Acc/Social-sp/SpringAcc.html">Social
                                 activity program</a>
                         <a href="../Fees/Fees-sp/Fees-sp.html">Fees</a>
-                        <a href="../Application/Spring/Springapp.html">Apply
-                                Now!</a>
+                        <a href="../Application/Spring/Springapp.html" class="apply-btn1">Apply Now!</a>
                     </div>
                 </li>
 
@@ -67,8 +66,7 @@
                         <a href="../Social-Acc/Social-su/SummerAcc.html">Social
                                 activity program</a>
                         <a href="../Fees/Fees-su/Fees-su.html">Fees</a>
-                        <a href="../Application/Summer/Summerapp.html">Apply
-                                Now!</a>
+                        <a href="../Application/Summer/Summerapp.html" class="apply-btn1">Apply Now!</a>
                     </div>
                 </li>
 
@@ -83,14 +81,13 @@
                         <a href="../Social-Acc/Social-su/SummerAcc.html">Social
                                 activity program</a>
                         <a href="../Fees/Fees-su/Fees-su.html">Fees</a>
-                        <a href="../Application/Summer/Summerapp.html">Apply
-                                Now!</a>
+                        <a href="../Application/Summer/Summerapp.html" class="apply-btn1">Apply Now!</a>
                     </div>
                 </li>
 
                 <!-- No dropdown items -->
                 <li><a href="#PRACTICAL">PRACTICAL INFORMATION</a></li>
-                <li><a href="#CONTACT">CONTACT US</a></li>
+                <li><a href="../contact/contact.html">CONTACT US</a></li>
 
             </ul>
         </nav>
@@ -121,13 +118,25 @@
                     <i class="fas fa-chart-line faculty-nav-icon"></i>
                     <span>Economics & Administrative Sciences</span>
                 </li>
-                <li class="faculty-nav-item arts" data-faculty="arts">
+                <li class="faculty-nav-item engineering" data-faculty="engineering">
+                    <i class="fas fa-cogs faculty-nav-icon"></i>
+                    <span>Engineering</span>
+                </li>
+                <li class="faculty-nav-item architecture" data-faculty="architecture">
+                    <i class="fas fa-city faculty-nav-icon"></i>
+                    <span>Architecture & Design</span>
+                </li>
+                <li class="faculty-nav-item fine-arts" data-faculty="fine-arts">
                     <i class="fas fa-palette faculty-nav-icon"></i>
                     <span>Fine Arts</span>
                 </li>
                 <li class="faculty-nav-item medicine" data-faculty="medicine">
                     <i class="fas fa-heartbeat faculty-nav-icon"></i>
                     <span>Medicine</span>
+                </li>
+                <li class="faculty-nav-item language" data-faculty="language">
+                    <i class="fas fa-language faculty-nav-icon"></i>
+                    <span>Language Courses</span>
                 </li>
             </ul>
         </nav>
@@ -138,9 +147,8 @@
                 <div class="faculty-icon faculty-economics">
                     <i class="fas fa-chart-line"></i>
                 </div>
-                <h2>Faculty of Economics and Administrative Sciences
-                </h2>
-                <span class="faculty-count">3 Courses</span>
+                <h2>Faculty of Economics and Administrative Sciences</h2>
+                <span class="faculty-count">4 Courses</span>
             </div>
 
             <div class="courses-grid" id="economics-courses">
@@ -151,15 +159,13 @@
                         <span class="course-faculty">Business
                                 Management</span>
                         <h3 class="course-title">Brand Management</h3>
-
                     </div>
-
                     <div class="course-body">
                         <p class="course-description">
-                            A comprehensive course designed to immerse students in the world of branding, emphasizing its paramount importance in modern business. Students will explore the essence of brands, their strategic significance, and the dynamic landscape they operate in.
+                            Brand Management is a comprehensive course designed to immerse students in the world of branding, emphasizing its paramount importance in modern business. Through this course, students will explore the essence of brands, their strategic significance,
+                            and the dynamic landscape they operate in.
                         </p>
                     </div>
-
                     <div class="course-footer">
                         <div class="course-actions">
                             <button class="btn btn-secondary" onclick="viewCourseDetails('brand-management')">
@@ -167,8 +173,7 @@
                                     Details
                                 </button>
                             <button class="btn btn-primary" onclick="enrollCourse('brand-management')">
-                                    <i class="fas fa-user-plus"></i> Enroll
-                                    Now
+                                    <i class="fas fa-user-plus"></i> Enroll Now
                                 </button>
                         </div>
                     </div>
@@ -181,16 +186,12 @@
                         <span class="course-faculty">Marketing & Digital
                                 Media</span>
                         <h3 class="course-title">Digital Marketing</h3>
-
                     </div>
-
                     <div class="course-body">
                         <p class="course-description">
                             Master digital marketing strategies including SEO, social media marketing, content strategy, and data analytics. Hands-on experience with digital marketing tools and platforms in the modern business environment.
                         </p>
-
                     </div>
-
                     <div class="course-footer">
                         <div class="course-actions">
                             <button class="btn btn-secondary" onclick="viewCourseDetails('digital-marketing')">
@@ -198,30 +199,25 @@
                                     Details
                                 </button>
                             <button class="btn btn-primary" onclick="enrollCourse('digital-marketing')">
-                                    <i class="fas fa-user-plus"></i> Enroll
-                                    Now
+                                    <i class="fas fa-user-plus"></i> Enroll Now
                                 </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- International Organizations and World Politics Course -->
-                <div class="course-card" data-ects="5" data-seats="18">
+                <!-- International Organizations Course -->
+                <div class="course-card" data-ects="5" data-seats="30">
                     <div class="course-badge">5 ECTS</div>
                     <div class="course-header">
-                        <span class="course-faculty">Political Science &
-                                IR</span>
+                        <span class="course-faculty">Political
+                                Science</span>
                         <h3 class="course-title">International Organizations and World Politics</h3>
-
                     </div>
-
                     <div class="course-body">
                         <p class="course-description">
                             Explore international organizations' roles, functions, and effectiveness in world politics from theoretical and empirical perspectives. Analyze approaches of great powers and middle powers to global governance.
                         </p>
-
                     </div>
-
                     <div class="course-footer">
                         <div class="course-actions">
                             <button class="btn btn-secondary" onclick="viewCourseDetails('international-organizations')">
@@ -229,8 +225,33 @@
                                     Details
                                 </button>
                             <button class="btn btn-primary" onclick="enrollCourse('international-organizations')">
-                                    <i class="fas fa-user-plus"></i> Enroll
-                                    Now
+                                    <i class="fas fa-user-plus"></i> Enroll Now
+                                </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAP Course -->
+                <div class="course-card" data-ects="5" data-seats="30">
+                    <div class="course-badge">5 ECTS</div>
+                    <div class="course-header">
+                        <span class="course-faculty">Business Information
+                                Systems</span>
+                        <h3 class="course-title">SAP® S/4HANA: Integration of Business Processes</h3>
+                    </div>
+                    <div class="course-body">
+                        <p class="course-description">
+                            Learn about SAP S/4HANA and how it integrates business processes across different departments. Gain practical skills in enterprise resource planning systems.
+                        </p>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-actions">
+                            <button class="btn btn-secondary" onclick="viewCourseDetails('sap-s4hana')">
+                                    <i class="fas fa-info-circle"></i> Full
+                                    Details
+                                </button>
+                            <button class="btn btn-primary" onclick="enrollCourse('sap-s4hana')">
+                                    <i class="fas fa-user-plus"></i> Enroll Now
                                 </button>
                         </div>
                     </div>
@@ -238,17 +259,93 @@
             </div>
         </section>
 
-        <!-- Faculty of Fine Arts -->
-        <section id="faculty-arts" class="faculty-section">
+        <!-- Faculty of Engineering -->
+        <section id="faculty-engineering" class="faculty-section">
             <div class="faculty-header">
-                <div class="faculty-icon faculty-arts">
-                    <i class="fas fa-palette"></i>
+                <div class="faculty-icon faculty-engineering">
+                    <i class="fas fa-cogs"></i>
                 </div>
-                <h2>Faculty of Fine Arts</h2>
+                <h2>Faculty of Engineering</h2>
                 <span class="faculty-count">1 Course</span>
             </div>
 
-            <div class="courses-grid" id="arts-courses">
+            <div class="courses-grid" id="engineering-courses">
+                <!-- Multi-Criteria Decision Making Course -->
+                <div class="course-card" data-ects="5" data-seats="20">
+                    <div class="course-badge">5 ECTS</div>
+                    <div class="course-header">
+                        <span class="course-faculty">Industrial
+                                Engineering</span>
+                        <h3 class="course-title">Multi-Criteria Decision Making
+                        </h3>
+                    </div>
+                    <div class="course-body">
+                        <p class="course-description">
+                            This course deliberates decision-making under uncertainty by addressing Multi-Criteria Decision Making (MCDM) techniques. Learn to evaluate alternatives using multiple conflicting objectives with methods including AHP, ANP, and TOPSIS.
+                        </p>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-actions">
+                            <button class="btn btn-secondary" onclick="viewCourseDetails('multi-criteria-decision')">
+                                    <i class="fas fa-info-circle"></i> Full
+                                    Details
+                                </button>
+                            <button class="btn btn-primary" onclick="enrollCourse('multi-criteria-decision')">
+                                    <i class="fas fa-user-plus"></i> Enroll Now
+                                </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faculty-architecture" class="faculty-section">
+            <div class="faculty-header">
+                <div class="faculty-icon faculty-architecture" style="background-color: #2c3e50; color: white;">
+                    <i class="fas fa-pencil-ruler"></i>
+                </div>
+                <h2>Faculty of Architecture and Design</h2>
+                <span class="faculty-count">1 Course</span>
+            </div>
+
+            <div class="courses-grid" id="architecture-courses">
+                <div class="course-card" data-ects="6" data-seats="20">
+                    <div class="course-badge">6 ECTS</div>
+                    <div class="course-header">
+                        <span class="course-faculty">Architecture (ARC360)</span>
+                        <h3 class="course-title">Istanbul as a Living Laboratory: Urban Analysis & Architectural Mapping</h3>
+                    </div>
+                    <div class="course-body">
+                        <p class="course-description">
+                            Treat Istanbul as a living laboratory. This intensive course introduces urban analysis and mapping as tools to interpret complex urban environments through field walks, site-based observations, and diagrammatic studies.
+                        </p>
+
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-actions">
+                            <button class="btn btn-secondary" onclick="viewCourseDetails('arc360')">
+                        <i class="fas fa-info-circle"></i> Full Details
+                    </button>
+                            <button class="btn btn-primary" onclick="enrollCourse('arc360')">
+                        <i class="fas fa-user-plus"></i> Enroll Now
+                    </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faculty of Fine Arts -->
+        <section id="faculty-fine-arts" class="faculty-section">
+            <div class="faculty-header">
+                <div class="faculty-icon faculty-fine-arts">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h2>Faculty of Fine Arts</h2>
+                <span class="faculty-count">2 Courses</span>
+            </div>
+
+            <div class="courses-grid" id="fine-arts-courses">
                 <!-- Art, History and Heritage of Anatolia Course -->
                 <div class="course-card" data-ects="5" data-seats="20">
                     <div class="course-badge">5 ECTS</div>
@@ -257,14 +354,11 @@
                                 Management</span>
                         <h3 class="course-title">Art, History and Heritage of Anatolia</h3>
                     </div>
-
                     <div class="course-body">
                         <p class="course-description">
-                            A two-week, interactive journey to discover the rich cultural and artistic heritage of Anatolia. Students will learn about Anatolian and Turkish art through presentations and experimental museum visits in Istanbul and Antalya.
+                            Explore Anatolian civilizations and Turkish art through interactive museum visits. Learn about Hittite, Phrygian, Lydian arts, traditional arts, calligraphy, miniatures, tiles, and contemporary Turkish artists.
                         </p>
-
                     </div>
-
                     <div class="course-footer">
                         <div class="course-actions">
                             <button class="btn btn-secondary" onclick="viewCourseDetails('anatolia-art')">
@@ -272,8 +366,32 @@
                                     Details
                                 </button>
                             <button class="btn btn-primary" onclick="enrollCourse('anatolia-art')">
-                                    <i class="fas fa-user-plus"></i> Enroll
-                                    Now
+                                    <i class="fas fa-user-plus"></i> Enroll Now
+                                </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Culinary Art of Anatolia Course -->
+                <div class="course-card" data-ects="3" data-seats="20">
+                    <div class="course-badge">3 ECTS</div>
+                    <div class="course-header">
+                        <span class="course-faculty">Culinary Arts</span>
+                        <h3 class="course-title">Culinary Art of Anatolia (Master Chef)</h3>
+                    </div>
+                    <div class="course-body">
+                        <p class="course-description">
+                            Discover the rich culinary traditions of Anatolia. Learn traditional cooking techniques, recipes, and cultural significance of Turkish cuisine from expert chefs.
+                        </p>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-actions">
+                            <button class="btn btn-secondary" onclick="viewCourseDetails('culinary-art')">
+                                    <i class="fas fa-info-circle"></i> Full
+                                    Details
+                                </button>
+                            <button class="btn btn-primary" onclick="enrollCourse('culinary-art')">
+                                    <i class="fas fa-user-plus"></i> Enroll Now
                                 </button>
                         </div>
                     </div>
@@ -288,7 +406,7 @@
                     <i class="fas fa-heartbeat"></i>
                 </div>
                 <h2>Faculty of Medicine</h2>
-                <span class="faculty-count">1 Course</span>
+                <span class="faculty-count">2 Courses</span>
             </div>
 
             <div class="courses-grid" id="medicine-courses">
@@ -301,15 +419,11 @@
                         <h3 class="course-title">Genetics and Medical Biotechnology
                         </h3>
                     </div>
-
                     <div class="course-body">
                         <p class="course-description">
-                            Explore the rapid growth in genetic engineering technology and biotechnology research. Learn about innovative technologies to improve human health by preventing, diagnosing, and treating genetic diseases through hands-on laboratory experience.
+                            Medical biotechnology has revolutionized healthcare by combining engineering technologies with biological sciences. Learn about genome sequencing, cloning, stem cell research, gene therapy, and CRISPR/Cas9 technology.
                         </p>
-
-
                     </div>
-
                     <div class="course-footer">
                         <div class="course-actions">
                             <button class="btn btn-secondary" onclick="viewCourseDetails('genetics-biotech')">
@@ -317,8 +431,71 @@
                                     Details
                                 </button>
                             <button class="btn btn-primary" onclick="enrollCourse('genetics-biotech')">
-                                    <i class="fas fa-user-plus"></i> Enroll
-                                    Now
+                                    <i class="fas fa-user-plus"></i> Enroll Now
+                                </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neuroscience Course -->
+                <div class="course-card" data-ects="6" data-seats="20">
+                    <div class="course-badge">6 ECTS</div>
+                    <div class="course-header">
+                        <span class="course-faculty">Medical Sciences</span>
+                        <h3 class="course-title">Neuroscience</h3>
+                    </div>
+                    <div class="course-body">
+                        <p class="course-description">
+                            Explore the complex workings of the nervous system. Study brain function, neural pathways, cognitive processes, and neurological disorders through both theoretical and practical approaches.
+                        </p>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-actions">
+                            <button class="btn btn-secondary" onclick="viewCourseDetails('neuroscience')">
+                                    <i class="fas fa-info-circle"></i> Full
+                                    Details
+                                </button>
+                            <button class="btn btn-primary" onclick="enrollCourse('neuroscience')">
+                                    <i class="fas fa-user-plus"></i> Enroll Now
+                                </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Language Courses -->
+        <section id="faculty-language" class="faculty-section">
+            <div class="faculty-header">
+                <div class="faculty-icon faculty-language">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h2>Language Courses</h2>
+                <span class="faculty-count">1 Course</span>
+            </div>
+
+            <div class="courses-grid" id="language-courses">
+                <!-- Turkish Language Course -->
+                <div class="course-card" data-ects="5" data-seats="20">
+                    <div class="course-badge">5 ECTS</div>
+                    <div class="course-header">
+                        <span class="course-faculty">Turkish Language and
+                                Literature</span>
+                        <h3 class="course-title">Introduction To Turkish Language and Culture</h3>
+                    </div>
+                    <div class="course-body">
+                        <p class="course-description">
+                            Learn Turkish grammar, listening, reading, writing, and speaking according to student levels (A1-C1). Participate in cultural activities and receive a certificate of participation or Turkish Proficiency Certificate based on exam results.
+                        </p>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-actions">
+                            <button class="btn btn-secondary" onclick="viewCourseDetails('turkish-language')">
+                                    <i class="fas fa-info-circle"></i> Full
+                                    Details
+                                </button>
+                            <button class="btn btn-primary" onclick="enrollCourse('turkish-language')">
+                                    <i class="fas fa-user-plus"></i> Enroll Now
                                 </button>
                         </div>
                     </div>
@@ -327,53 +504,57 @@
         </section>
     </main>
 
+    <section class="cta-section c-section" id="courses">
+        <div class="c-container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Journey?</h2>
+                <p>Explore our accommodations and take the first step toward a comfortable and unforgettable living experience in Turkey.</p>
+                <div class="cta-buttons">
+                    <a href="../Accomodations/summer_acc/Accomodations.html" class="cbtn cbtn-primary cbtn-large">Check Accommodations List</a>
+                    <a href="https://delightfulapp.aydin.edu.tr/?AppType=Winter" class="cbtn cbtn-secondary cbtn-large" target="_blank">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Erasmus+ Blended Online Mobility</h3>
-                    <p>Providing high-quality international education through flexible blended learning programs that combine online and mobility components.</p>
-                    <p>ECTS credits recognized across European higher education institutions.</p>
-                </div>
+    <footer class="site-footer">
+        <div class="footer-top container">
+            <div class="row">
+                <div class="col-md-4 footer-col about">
+                    <h4 class="boldText">Istanbul Aydin University - Delightful Program</h4>
 
-                <div class="footer-section">
-                    <h3>Contact Information</h3>
-                    <p><i class="fas fa-envelope"></i> erasmus.programs@university.edu
-                    </p>
-                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567
-                    </p>
-                    <p><i class="fas fa-map-marker-alt"></i> International Office, University Campus</p>
+                    <p>Delightful Istanbul – Your ultimate guide to discovering the wonders of Istanbul. Experience the magic where East meets West.</p>
                 </div>
-
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <a href="#" onclick="viewProgramFees()">Program
-                            Fees</a>
-                    <a href="#">Application Process</a>
-                    <a href="#">ECTS Information</a>
-                    <a href="#">Academic Calendar 2025</a>
-                    <a href="#">Visa & Accommodation</a>
+                <div class="col-md-4 footer-col links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="winter/winter.html">Winter</a></li>
+                        <li><a href="spring/spring.html">Spring</a></li>
+                        <li><a href="summer/summer.html">Summer</a></li>
+                        <li><a href="summer/summer.html">Late Summer</a></li>
+                    </ul>
                 </div>
+                <div class="col-md-4 footer-col contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@delightfulistanbul.com</p>
+                    <p>Phone: +90 123 456 7890</p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com" target="_blank" class="footer-social footer-facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="footer-social footer-instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
 
-                <div class="footer-section">
-                    <h3>Follow Our Programs</h3>
-                    <a href="#"><i class="fab fa-twitter"></i>
-                            Twitter</a>
-                    <a href="#"><i class="fab fa-linkedin"></i>
-                            LinkedIn</a>
-                    <a href="#"><i class="fab fa-instagram"></i>
-                            Instagram</a>
-                    <a href="#"><i class="fab fa-youtube"></i> YouTube
-                            Channel</a>
+
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <p>Copyright © 2025 Delightful Istanbul | Erasmus+ Blended Online Mobility Programs</p>
-                <p>All course details are subject to change. The university reserves the right to cancel courses with insufficient enrollment.
-                </p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Delightful Istanbul. All rights reserved.</p>
+            <p>Made with ❤️ for travelers around the world</p>
         </div>
     </footer>
 
@@ -389,8 +570,6 @@
             </div>
         </div>
     </div>
-
-
 
     <script>
         // Course Data with all details from your files
@@ -408,8 +587,8 @@
                 code: "BUS497",
                 maxParticipants: 30,
                 prerequisites: "Basic Marketing Management Knowledge",
-                participants: "All Students Interested in Brand Management and Marketing in a Colorful World",
-                description: ` Brand Management is a comprehensive course designed to immerse students in the world of branding, emphasizing its paramount importance in modern business. Through this course, students will explore the essence of brands, their strategic significance, and the dynamic landscape they operate in. The curriculum delves into fundamental branding principles, equipping students with the skills to analyze, create, and nurture strong brand identities. It also encompasses consumer behavior insights, global brand management challenges, ethical considerations, and the measurement of brand effectiveness. Moreover, students will engage in practical exercises, including a group project, to develop a deep understanding of brand management’s real-world applications. This course empowers participants to become adept brand strategists ready to tackle the evolving branding challenges of the future.
+                participants: "All Students Interested in Brand Management and Marketing",
+                description: `Brand Management is a comprehensive course designed to immerse students in the world of branding, emphasizing its paramount importance in modern business. Through this course, students will explore the essence of brands, their strategic significance, and the dynamic landscape they operate in. The curriculum delves into fundamental branding principles, equipping students with the skills to analyze, create, and nurture strong brand identities. It also encompasses consumer behavior insights, global brand management challenges, ethical considerations, and the measurement of brand effectiveness. Moreover, students will engage in practical exercises, including a group project, to develop a deep understanding of brand management's real-world applications. This course empowers participants to become adept brand strategists ready to tackle the evolving branding challenges of the future.
 
 This course aims to equip students with a profound understanding of brand management, enabling them to navigate the complex and ever-changing world of branding with confidence and expertise. Through a blend of theoretical knowledge and practical applications, students will develop the ability to analyze, create, and strategically manage brands to drive business success. By exploring the core principles of branding, students will gain insights into the significance of brand equity, positioning, and differentiation. They will also delve into the intricacies of consumer behavior and perception, learning how to build and maintain strong brand relationships.
 
@@ -423,9 +602,9 @@ Furthermore, this course aims to foster a global perspective on brand management
                 curriculum: {
                     "Week 1": {
                         "Day 1": "Basics of Marketing",
-                        "Day 2": "Market Analysis Segmentation, Targeting, and Positioning The Marketing Mix: 4Ps of Marketing Product, Price, Place, and Promotion Strategies. A Communication Perspective, Brand Positioning, and Value",
+                        "Day 2": "Market Analysis, Segmentation, Targeting, and Positioning",
                         "Day 3": "Brands and Brand Management: Why Do We Study It?",
-                        "Day 4": "The Role of Brands Branding Concepts: Brand Awareness (Recognition and Recall), Brand Identity and Brand Image, Brand Personality, Brand Judgments, and Brand Loyalty",
+                        "Day 4": "The Role of Brands, Branding Concepts",
                         "Day 5": "Brand Equity; Marketing Programs for Brand Equity"
                     },
                     "Week 2": {
@@ -436,7 +615,7 @@ Furthermore, this course aims to foster a global perspective on brand management
                         "Day 5": "Presentations"
                     }
                 },
-                onlineComponent: "Project Work/Presentations",
+                onlineComponent: "Project ",
                 assessment: [{
                     component: "Attendance",
                     percentage: "10%"
@@ -444,14 +623,16 @@ Furthermore, this course aims to foster a global perspective on brand management
                     component: "Homework",
                     percentage: "20%"
                 }, {
-                    component: "Project ",
+                    component: "Project",
                     percentage: "40%"
                 }, {
                     component: "Final Exam",
                     percentage: "30%"
                 }],
                 materials: [
-                    "Lecture Notes to be shared during the courses",
+                    "Lecture Notes to be shared during the courses"
+                ],
+                recommendedBooks: [
                     "Keller, K. L. (2019). Strategic Brand Management: Building, Measuring, and Managing Brand Equity (5th ed.). Pearson",
                     "Christoph Burmann, Nicola-Maria Riley, Tilo Halaszovich, Michael Schade (2017), Identity-Based Brand Management. SpringerGabler",
                     "Aaker, D. A. (2014). Aaker on Branding, 20 Principles that Drive Success. Morgan James Publishing",
@@ -462,39 +643,25 @@ Furthermore, this course aims to foster a global perspective on brand management
             'digital-marketing': {
                 title: "Digital Marketing",
                 faculty: "Faculty of Economics and Administrative Sciences",
-                department: "Marketing & Digital Media",
+                department: "Business Administration",
                 ects: 5,
                 format: "Blended Online Mobility Erasmus+",
                 instructor: "Assoc. Prof. Dr. Burçin Kaplan",
-                email: "burcin.kaplan@aydin.edu.tr",
-                avatar: "/imgs/Burcin.jpg",
+                email: "burcinkaplan@aydin.edu.tr",
+                avatar: "/imgs/Burcin .jpg",
                 biography: '<a href="#"><i class="fas fa-user"></i> View Biography</a>',
-                code: "DIGI/789",
-                maxParticipants: 30,
+                code: "BUS318",
+                maxParticipants: 50,
                 prerequisites: "Basic Marketing Knowledge",
                 description: "Master digital marketing strategies including SEO, social media marketing, content strategy, and data analytics. Hands-on experience with digital marketing tools and platforms in the modern business environment.",
                 learningOutcomes: [
-                    "Develop effective digital marketing campaigns",
-                    "Analyze digital marketing metrics and ROI",
-                    "Implement SEO and content marketing strategies",
-                    "Utilize social media platforms for marketing"
-                ],
-                curriculum: {
-                    "Week 1": {
-                        "Day 1": "Basics of Marketing",
-                        "Day 2": "Market Analysis Segmentation, Targeting, and Positioning The Marketing Mix: 4Ps of Marketing Product, Price, Place, and Promotion Strategies. A Communication Perspective, Brand Positioning, and Value",
-                        "Day 3": "Brands and Brand Management: Why Do We Study It?",
-                        "Day 4": "The Role of Brands Branding Concepts: Brand Awareness (Recognition and Recall), Brand Identity and Brand Image, Brand Personality, Brand Judgments, and Brand Loyalty",
-                        "Day 5": "Brand Equity; Marketing Programs for Brand Equity"
-                    },
-                    "Week 2": {
-                        "Day 1": "Choosing Brand Elements: Other Branding Concepts",
-                        "Day 2": "Brand Portfolio Management",
-                        "Day 3": "Global Branding",
-                        "Day 4": "Managing Brands in The Digital Era",
-                        "Day 5": "Presentations"
-                    }
-                }
+                    "Be familiar with the concepts, theories, and issues in digital marketing",
+                    "Familiarize with the key technologies and strategies used by firms in digital advertising",
+                    "Understand the key metrics in web and social media analytics",
+                    "Develop analytical abilities to understand how digital technology is influencing consumer behavior",
+                    "Make independent assessments of the digital marketing strategies of companies",
+                    "Develop teamwork, critical thinking, and business communication skills"
+                ]
             },
             'international-organizations': {
                 title: "International Organizations and World Politics",
@@ -504,11 +671,85 @@ Furthermore, this course aims to foster a global perspective on brand management
                 format: "Blended Online Mobility Erasmus+",
                 instructor: "Prof. Dr. Fritz Kostman",
                 email: "fritzkostman@cyphs.edu.cn",
-                avatar: "imgs/rembert.jpg",
+                avatar: "/imgs/Filiz.jpeg",
+                biography: '<a href="#"><i class="fas fa-user"></i> View Biography</a>',
                 code: "POLS/IR/951",
                 maxParticipants: 18,
                 prerequisites: "Basic knowledge in international politics",
                 description: "Explore international organizations' roles, functions, and effectiveness in world politics from theoretical and empirical perspectives. Analyze approaches of great powers and middle powers to global governance."
+            },
+            'sap-s4hana': {
+                title: "SAP® S/4HANA: Integration of Business Processes",
+                faculty: "Faculty of Economics and Administrative Sciences",
+                department: "Business Information Systems",
+                ects: 5,
+                format: "Blended Online Mobility Erasmus+",
+                instructor: "TBA",
+                email: "sap.course@university.edu",
+                avatar: "/imgs/Ernst.jpg",
+                biography: '<a href="#"><i class="fas fa-user"></i> View Biography</a>',
+                code: "BIS450",
+                maxParticipants: 30,
+                prerequisites: "Basic computer skills",
+                description: "Learn about SAP S/4HANA and how it integrates business processes across different departments. Gain practical skills in enterprise resource planning systems."
+            },
+            'multi-criteria-decision': {
+                title: "Multi-Criteria Decision Making",
+                faculty: "Faculty of Engineering",
+                department: "Industrial Engineering",
+                ects: 5,
+                format: "Blended Online Mobility Erasmus+",
+                instructor: "Assoc. Prof. Dr. Nima Mirzaei",
+                email: "nimamirzaei@aydin.edu.tr",
+                avatar: "/imgs/Nima.jpg",
+                biography: '<a href="#"><i class="fas fa-user"></i> View Biography</a>',
+                code: "INE460",
+                maxParticipants: 20,
+                prerequisites: "Basic Knowledge of Mathematics and Statistics",
+                participants: "Engineering, Social Sciences, Humanities, Communication, Architecture, Business, and Marketing Students",
+                description: `We live in a complex world with diverse people, firms, and governments whose behaviors aggregate to produce novel, unexpected phenomena. We need to make strategic decisions in uncertain and complex situations in which information is ambiguous. Effective decision-making requires the adoption of decision approaches that fit the complexities of these situations and the efficient management of decision-making processes. Within the two weeks, participants will be able to learn popular decision-making methods and software to assist them in decision-making when facing a real-life problem.
+
+This course deliberates decision-making under uncertainty by addressing Multi-Criteria Decision Making (MCDM) techniques. MCDM is a collection of methods for trading off different alternatives' performance on multiple conflicting objectives; methods discussed include the Analytic Hierarchy Process (AHP), Analytic Network Process (ANP), and Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) methods. Both qualitative and quantitative factors are considered to evaluate alternatives.
+
+Finally, SuperDecion software is introduced in this course as a complementary tool for the decision-making approach.`,
+                learningOutcomes: [
+                    "Configure the Problems by Analytical Thinking and Classify the Problems",
+                    "Cooperate with a Group for a Decision-making Process",
+                    "Implement an MCDM Approach to a Real-life Problem and Apply the Method in Professional Practice",
+                    "Apply AHP, ANP, and TOPSIS Multi-criteria Decision-making Techniques",
+                    "Use Computer Programs (SuperDecion and Excel) to Model and Solve a Problem"
+                ],
+                curriculum: {
+                    "Week 1": {
+                        "Day 1": "Basic Concepts of Multi-Criteria Decision Making (MCDM)",
+                        "Day 2": "Analytic Hierarchy Process (AHP)",
+                        "Day 3": "Case studies and Computer Applications for AHP (SuperDecion Program)",
+                        "Day 4": "Analytic Network Process (ANP)",
+                        "Day 5": "Midterm Exam"
+                    },
+                    "Week 2": {
+                        "Day 1": "Case studies and Computer Applications for ANP (SuperDecion program)",
+                        "Day 2": "Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) method",
+                        "Day 3": "Application of TOPSIS in Excel",
+                        "Day 4": "Real-Life Case Studies Evaluation and Discussion",
+                        "Day 5": "Final Exam"
+                    }
+                },
+                onlineComponent: "Project Presentations",
+                assessment: [{
+                    component: "Project Presentations",
+                    percentage: "30%"
+                }, {
+                    component: "Midterm Exam",
+                    percentage: "30%"
+                }, {
+                    component: "Final Exam",
+                    percentage: "40%"
+                }],
+                materials: [
+                    "Microsoft PPT, Books, Articles, and Videos"
+                ],
+                disclaimer: "IAU reserves the right to cancel any of the courses if insufficient enrollment occurs (Less than 10 participants)"
             },
             'anatolia-art': {
                 title: "Art, History and Heritage of Anatolia",
@@ -518,9 +759,8 @@ Furthermore, this course aims to foster a global perspective on brand management
                 format: "Blended Online Mobility Erasmus+",
                 instructor: "Assist. Prof. Dr. Mesut Batuhan Çankır",
                 email: "mesutcankir@aydin.edu.tr",
-                avatar: "imgs/rembert.jpg",
+                avatar: "/imgs/Mesut.png",
                 biography: '<a href="#"><i class="fas fa-user"></i> View Biography</a>',
-                biography: "Click Here",
                 code: "To be announced soon",
                 maxParticipants: 20,
                 prerequisites: "None",
@@ -537,14 +777,14 @@ The museums that will be visited are the Istanbul Archeological Museums, Topkap�
                 ],
                 curriculum: {
                     "Week 1": {
-                        "Day 1": "Anatolian Civilizations",
-                        "Day 2": "Traditional Turkish Art – I",
-                        "Day 3": "Traditional Turkish Art – II",
-                        "Day 4": "Contemporary Turkish Art – I",
-                        "Day 5": "Contemporary Turkish Art – II"
+                        "Day 1": "Meeting & Lecture: Anatolian Civilizations",
+                        "Day 2": "Visiting Sakıp Sabancı Museum",
+                        "Day 3": "Lecture: Traditional Turkish Art",
+                        "Day 4": "Visiting Istanbul Archaeological Museums",
+                        "Day 5": "Visiting Istanbul Museum of Painting & Sculpture"
                     },
                     "Week 2": {
-                        "Day 1": "Visiting Sakıp Sabancı Museum",
+                        "Day 1": "Lecture: Contemporary Turkish Art & Quiz",
                         "Day 2": "Visiting Museum of Turkish and Islamic Art",
                         "Day 3": "Visiting Pera Museum & Taksim Galleries",
                         "Day 4": "Visiting Istanbul Modern",
@@ -565,6 +805,22 @@ The museums that will be visited are the Istanbul Archeological Museums, Topkap�
                 materials: ["Readings will be shared during the course"],
                 disclaimer: "IAU reserves the right to cancel any of the courses if insufficient enrollment occurs (Less than 10 participants)"
             },
+            'culinary-art': {
+                title: "Culinary Art of Anatolia (Master Chef)",
+                faculty: "Faculty of Fine Arts",
+                department: "Culinary Arts",
+                ects: 3,
+                format: "Culinary Program",
+                instructor: "TBA",
+                email: "culinary.art@university.edu",
+                avatar: "imgs/rembert.jpg",
+                biography: '<a href="#"><i class="fas fa-user"></i> View Biography</a>',
+                code: "CUL101",
+                maxParticipants: 20,
+                prerequisites: "None",
+                participants: "All students interested in culinary arts",
+                description: "Discover the rich culinary traditions of Anatolia. Learn traditional cooking techniques, recipes, and cultural significance of Turkish cuisine from expert chefs."
+            },
             'genetics-biotech': {
                 title: "Genetics and Medical Biotechnology",
                 faculty: "Faculty of Medicine",
@@ -573,13 +829,12 @@ The museums that will be visited are the Istanbul Archeological Museums, Topkap�
                 format: "Blended Online Mobility Erasmus+",
                 instructor: "Assist. Prof. Dr. Arta Armani",
                 email: "artaarmani@aydin.edu.tr",
-                avatar: "/imgs/rembert.jpg",
+                avatar: "imgs/rembert.jpg",
                 biography: '<a href="#"><i class="fas fa-user"></i> View Biography</a>',
-                biography: "Click Here",
                 code: "MED111",
                 maxParticipants: 20,
                 prerequisites: "Basic Genetics and Computer Skills",
-                participants: "Students from the Faculty of Medicine, Genetic Engineering, Science, and Arts (Genetics, Biotechnology, Bioinformatics, Neuroscience, Biochemistry) departments.",
+                participants: "Students from Faculty of Medicine, Genetic Engineering, Science, and Arts (Genetics, Biotechnology, Bioinformatics, Neuroscience, Biochemistry) departments",
                 description: `Medical biotechnology, with the growth in genetic engineering technology and the advancement of research in biotechnology, has experienced rapid growth in recent years. This natural science field leads to opportunities to develop innovative technologies to improve human health by preventing, diagnosing, and treating genetic diseases. In this line, Medical Biotechnology has revolutionized the health system and combines engineering technologies with biological sciences to regulate systems and living organisms. Genome sequencing, cloning, stem cell research, and gene therapy, combined with CRISPR/Cas9 technology, are the most important benefits of genetic engineering that make this field indispensable in the modern world.
 
 The course aims to teach advanced lessons in the biological processes meant for medical biotechnology and other purposes. During the course, the concept of medical biotechnology and its connections with human genetic diseases will be covered systematically from the central dogma of genetics and then generalized with the recent applications in biotechnology, with special topics.
@@ -600,16 +855,16 @@ The course is designed in two parts which will provide students the opportunity 
                         "Day 5": "Medical Biotechnology and Its Applications: Agarose Gel Electrophoresis"
                     },
                     "Week 2": {
-                        "Day 1": "Bioinformatics and Genomic Databases",
-                        "Day 2": "The Greatest Discovery: The Human Genome Project and Sequence Analysis",
-                        "Day 3": "Cancer Genetics, Pharmacogenomics and Bioinformatics Tools",
-                        "Day 4": "Gene Therapy, CRISPR/Cas9 Technology, and Agarose Gel Electrophoresis",
+                        "Day 1": "Cancer Genetics, Pharmacogenomics, and Bioinformatics Tools",
+                        "Day 2": "Gene Primer Design: Cloning and Sequencing",
+                        "Day 3": "The Greatest Discovery: The Human Genome Project and Sequence Analysis",
+                        "Day 4": "Gene Therapy and CRISPR/Cas9 Technology",
                         "Day 5": "Ethics and Medical Biotechnology"
                     }
                 },
-                onlineComponent: "Research (HW) Project Presentations",
+                onlineComponent: "Project Presentations",
                 assessment: [{
-                    component: "Research (HW) Project Presentation",
+                    component: "Homework",
                     percentage: "30%"
                 }, {
                     component: "Midterm Exam",
@@ -618,7 +873,125 @@ The course is designed in two parts which will provide students the opportunity 
                     component: "Final Exam",
                     percentage: "40%"
                 }],
-                materials: [],
+                disclaimer: "IAU reserves the right to cancel any of the courses if insufficient enrollment occurs (Less than 10 participants)"
+            },
+            'neuroscience': {
+                title: "Neuroscience",
+                faculty: "Faculty of Medicine",
+                department: "Medical Sciences",
+                ects: 6,
+                format: "Blended Online Mobility Erasmus+",
+                instructor: "TBA",
+                email: "neuroscience@university.edu",
+                avatar: "imgs/rembert.jpg",
+                biography: '<a href="#"><i class="fas fa-user"></i> View Biography</a>',
+                code: "MED210",
+                maxParticipants: 20,
+                prerequisites: "Basic biology knowledge",
+                description: "Explore the complex workings of the nervous system. Study brain function, neural pathways, cognitive processes, and neurological disorders through both theoretical and practical approaches."
+            },
+            'arc360': {
+                title: "Reading the City: Urban Analysis and Architectural Mapping in Istanbul",
+                faculty: "Faculty of Architecture and Design",
+                department: "Architecture",
+                ects: 5, // Estimated based on similar courses in your list
+                format: "Intensive Summer Course / Field Study",
+                instructor: "Assist. Prof. Dr. Saba Matin",
+                email: "sabamatinaygoren@aydin.edu.tr",
+                avatar: "../imgs/Saba.jpg", // Placeholder path
+                biography: '<a href="#"><i class="fas fa-user"></i> View Biography</a>',
+                code: "ARC360",
+                maxParticipants: 20,
+                prerequisites: "No formal prerequisites (Basic familiarity with representation and urban spatial concepts is recommended)",
+                participants: "Architecture, Interior Architecture, Urban Design, Landscape Architecture, and City & Regional Planning students",
+                description: `Istanbul is not merely a city but a multilayered urban archive shaped by centuries of cultural, spatial, and social transformation. Its streets, buildings, and public spaces function as an open textbook where architectural ideas, urban patterns, and everyday life intersect. 
+
+    This intensive summer course treats Istanbul as a living laboratory, introducing students to urban analysis and architectural mapping as essential tools for reading and interpreting complex urban environments. Through lectures, guided urban walks, site-based observations, and diagrammatic studies, participants will explore how architectural form, movement, public space, and social activity interact within the city.`,
+                learningOutcomes: [
+                    "Explain fundamental concepts and theoretical frameworks of urban analysis and architectural mapping",
+                    "Analyze urban form, spatial organization, and public space through architectural criteria",
+                    "Interpret relationships between built form, movement, and social behavior in urban environments",
+                    "Apply site-based observation and field study methods to real urban contexts",
+                    "Produce analytical drawings, diagrams, and mappings to represent urban data",
+                    "Develop architectural narratives based on spatial, cultural, and morphological analysis",
+                    "Communicate urban and architectural analyses effectively through visual, verbal, and written presentations"
+                ],
+                curriculum: {
+                    "Week 1": {
+                        "Day 1": "Istanbul as a Living Laboratory: Introduction to Urban Analysis",
+                        "Day 2": "Urban Morphology and Spatial Layers: Field Observation & In-Class Discussion",
+                        "Day 3": "Architectural Mapping & Diagramming Techniques: Field-Based Analysis",
+                        "Day 4": "Urban Walk & Site Observation: Reading Public Space and Movement",
+                        "Day 5": "Analytical Mapping Workshop & Midterm Review: Processing Field Data"
+                    },
+                    "Week 2": {
+                        "Day 1": "Public Space, Movement, and Urban Life: Urban Walk & On-Site Analysis",
+                        "Day 2": "Cultural and Historical Layers of Istanbul: Field Observation & Mapping",
+                        "Day 3": "Translating Urban Data into Architectural Narratives: Studio + Field Synthesis",
+                        "Day 4": "Final Project Development & Studio Critique: Integrating Field Studies",
+                        "Day 5": "Wrap-Up, Final Presentations & Discussion: Reflecting on Field Experience"
+                    }
+                },
+                onlineComponent: "Project Presentations",
+                assessment: [{
+                    component: "Midterm Analytical Study",
+                    percentage: "30%"
+                }, {
+                    component: "Project-based Presentations",
+                    percentage: "20%"
+                }, {
+                    component: "Final Mapping Project & Presentations",
+                    percentage: "50%"
+                }],
+                materials: [
+                    "Lecture presentations (PPT), academic articles, maps, architectural drawings, visual references, and digital resources."
+                ],
+                disclaimer: "IAU reserves the right to cancel any of the courses if insufficient enrollment occurs (Less than 10 participants)"
+            },
+            'turkish-language': {
+                title: "Introduction To Turkish Language and Culture",
+                faculty: "Arts and Sciences",
+                department: "Turkish Language and Literature",
+                ects: 5,
+                format: "Blended Online Mobility Erasmus+",
+                instructor: "Gülşah Sefer",
+                email: "gulsaharici@aydin.edu.tr",
+                avatar: "imgs/rembert.jpg",
+                biography: '<a href="#"><i class="fas fa-user"></i> View Biography</a>',
+                code: "TDE380",
+                maxParticipants: 20,
+                prerequisites: "None",
+                participants: "University students who are interested in the Turkish Language and Turkish Culture",
+                description: `The Turkish language is spoken by over eighty million speakers in Turkey and more than six million speakers in Europe, the Caucasus, and other regions of the world. Learning Turkish offers a greater understanding of regional politics, economics, history, and sociology. This program consists of a two-week Turkish course and a cultural learning program for students coming to our university as part of the 'Delightful Istanbul Summer School'.
+
+In this course, Turkish grammar, listening, reading, writing, and speaking lessons are given according to the students' levels (A1-A2-B1-B2-C1). Students receive education taking into account the competencies of the "Common European Framework of Reference for Languages". In addition to theoretical information, activities that introduce Turkish culture closely are carried out within the scope of the course. Students participating in the program will be given a certificate of participation for attending Turkish classes. Apart from this, students who want a Turkish Proficiency Certificate will take a placement test, and according to the exam results, they will receive a Turkish Proficiency Certificate.
+
+Week 1 and 2 classes will be held from Monday to Friday at determined times. In the second week of the program, a special placement test will be held for students who want to receive the TÖMER Certificate.`,
+                learningOutcomes: [
+                    "Understand The Rules of The Turkish Language",
+                    "Learn Information About Turkish Culture",
+                    "Improve Their Turkish Speaking Skills Within The Scope of The Level They Have Taken"
+                ],
+                curriculum: {
+                    "Week 1": {
+                        "Day 1": "To be announced soon…",
+                        "Day 2": "To be announced soon…",
+                        "Day 3": "To be announced soon…",
+                        "Day 4": "To be announced soon…",
+                        "Day 5": "To be announced soon…"
+                    },
+                    "Week 2": {
+                        "Day 1": "To be announced soon…",
+                        "Day 2": "To be announced soon…",
+                        "Day 3": "To be announced soon…",
+                        "Day 4": "To be announced soon…",
+                        "Day 5": "To be announced soon…"
+                    }
+                },
+                onlineComponent: "To be announced soon…",
+                materials: [
+                    "A textbook called 'Aydın Türkçe Öğreniyor' suitable for A1-A2-B1-B2-C1 levels, printed and digital materials prepared by the teachers themselves are used."
+                ],
                 disclaimer: "IAU reserves the right to cancel any of the courses if insufficient enrollment occurs (Less than 10 participants)"
             }
         };
@@ -768,43 +1141,11 @@ The course is designed in two parts which will provide students the opportunity 
         <div style="display: flex; align-items: center; gap: 20px;">
             <div style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
                 ${
-  course.avatar
-    ? `
-    <img 
-      src="${course.avatar}" 
-      alt="${course.instructor}"
-      style="width:100%; height:100%; object-fit:cover;"
-      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-    >
-    <div style="
-      display:none;
-      width:100%;
-      height:100%;
-      background: linear-gradient(135deg, #5A1F8E, #4A1478);
-      align-items:center;
-      justify-content:center;
-      color:white;
-      font-weight:bold;
-      font-size:1.5rem;">
-      ${course.instructor.split(' ').map(n => n[0]).join('')}
-    </div>
-    `
-    : `
-    <div style="
-      width:100%;
-      height:100%;
-      background: linear-gradient(135deg, #5A1F8E, #4A1478);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:white;
-      font-weight:bold;
-      font-size:1.5rem;">
-      ${course.instructor.split(' ').map(n => n[0]).join('')}
-    </div>
-    `
-}
-
+                    course.avatar
+                        ? `<img src="${course.avatar}" style="width: 100%; height: 100%; object-fit: cover;">`
+                        : `<div style="width: 100%; height: 100%; background: linear-gradient(135deg, #5A1F8E, #4A1478); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem;">
+                                ${course.instructor.split(' ').map(n => n[0]).join('')}
+                           </div>`
                 }
             </div>
 
@@ -953,6 +1294,7 @@ The course is designed in two parts which will provide students the opportunity 
     </script>
 </body>
 
-</html>
+</html>cript>
+</body>
 
 </html>
