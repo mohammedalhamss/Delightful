@@ -63,7 +63,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Add scroll animation for elements
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -10px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -91,7 +91,7 @@ window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero-accommodation');
     if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        hero.style.transform = `translateY(${scrolled * 0.4}px)`;
     }
 });
 

@@ -1,4 +1,21 @@
-/* Reset and Base Styles */
+:root {
+    --primary-color: #107f7f;
+    --primary-dark: #2d6160;
+    --primary-light: #5ac1c0;
+    --black: #000000;
+    --white: #ffffff;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-700: #495057;
+    --gray-900: #212529;
+    
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --transition-speed: 0.3s;
+    --border-radius: 12px;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 15px 40px rgba(22, 209, 206, 0.6);
+}
 * {
     margin: 0;
     padding: 0;
@@ -106,56 +123,104 @@ body {
    DROPDOWN BASE
    ============================================ */
 .dropdown {
-    position: relative;
+  position: relative;
 }
 
 /* Dropdown container */
 .dropdown-menu {
-    position: absolute;
-    top: calc(100% + 5px);
-    left: 0;
-    background: white;
-    padding: 10px 0;
-    border-radius: 6px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    white-space: nowrap;
-    z-index: 2000;
+  position: absolute;
+  top: 100%;              /* ✅ remove the 5px gap */
+  left: 0;
+  margin-top: 5px;        /* ✅ visual spacing WITHOUT breaking hover */
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+  z-index: 2000;
 
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-    /* HIDDEN BY DEFAULT, BUT WITH TRANSITIONS */
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
-    /* when hiding: wait 1s before visibility changes */
-    transition:
-        opacity 0.25s ease 0.3s,
-        visibility 0s linear 0.3s;
+  /* ✅ smooth, but no delay */
+  transition: opacity 0.18s ease, visibility 0s linear 0.18s;
 }
 
 /* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-
-    /* when showing: no delay */
-    transition:
-        opacity 0.25s ease,
-        visibility 0s linear 0s;
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu { /* ✅ also works for keyboard/click */
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.18s ease, visibility 0s linear 0s;
 }
 
 /* Dropdown links */
 .dropdown-menu a {
-    font-size: 0.85rem;
-    color: #111;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 6px 15px;
-    position: relative;
+  font-size: 0.85rem;
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 15px;
+  position: relative;
+}
+
+/* hover underline */
+.dropdown-menu a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #ff8e00;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
+}
+
+.dropdown-menu a:hover::after {
+  width: 100%;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -8px;      /* bridge area above the menu */
+  height: 8px;
+}
+
+.dropdown-menu .apply-btn1{
+  display:block;
+  width:100%;
+  background:#ff8e00;
+  color:#fff !important;
+  padding:8px 15px;
+  position:relative;
+}
+
+.dropdown-menu .apply-btn1::after{
+  content:'';
+  position:absolute;
+  width:0%;
+  height:2px;
+  background:white;
+  left:0;
+  bottom:2px;
+  transition:0.3s ease;
+}
+
+.dropdown-menu .apply-btn1:hover::after{
+  width:100%;
+}
+
+.dropdown-menu .apply-btn1:hover{
+  background:#ff8e00;
+  color:#fff !important;
 }
 
 /* hover underline */
@@ -169,12 +234,6 @@ body {
     bottom: -3px;
     transition: 0.3s;
 }
-
-.dropdown-menu a:hover::after {
-    width: 100%;
-}
-
-
 /* Hero Section */
 .hero-accommodation {
     height: 60vh;
@@ -294,7 +353,7 @@ body {
 
 .hotel-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 50px rgba(102, 36, 131, 0.2);
+    box-shadow: 0 15px 50px rgba(255, 142, 0, 0.2);
 }
 
 .hotel-header {
@@ -586,37 +645,6 @@ body {
     line-height: 1.6;
 }
 
-/* CTA Section */
-.cta-section {
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #ff8e00 0%, #e67f00 100%);
-    text-align: center;
-    color: white;
-}
-
-.cta-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.cta-section p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.95;
-}
-
-.btn-light {
-    background: white;
-    color: #ff8e00;
-    padding: 1rem 3rem;
-    font-size: 1.1rem;
-}
-
-.btn-light:hover {
-    background: #f0f0f0;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
 
 /* Footer */
 footer {
@@ -716,4 +744,265 @@ footer {
         font-size: 0.85rem;
         padding: 0.5rem 1rem;
     }
+}
+
+.site-footer {
+  background: #0c1220 !important;
+  color: #d7ddff !important;
+  padding: 0;
+}
+
+/* make sure footer container doesn't stretch weirdly */
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+/* TOP SECTION */
+.site-footer .footer-top {
+  padding: 56px 0 34px !important;
+}
+
+/* Kill any "row" flex overrides and use grid for clean columns */
+.site-footer .footer-top .row {
+  display: grid !important;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 34px !important;
+  align-items: start !important;
+  margin: 0 !important;
+}
+
+/* neutralize bootstrap column sizing/margins that might be broken */
+.site-footer .footer-col {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 0;
+}
+
+/* HEADINGS */
+.site-footer h4 {
+  margin: 0 0 14px !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2px;
+}
+
+/* ABOUT TEXT */
+.site-footer .about p {
+  margin: 0 !important;
+  color: rgba(215, 221, 255, 0.82) !important;
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+  max-width: 42ch;
+}
+
+/* LINKS */
+.site-footer .links ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.site-footer .links li {
+  margin: 0 0 10px !important;
+}
+
+.site-footer .links a {
+  color: rgba(215, 221, 255, 0.88) !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  display: inline-flex;
+  gap: 8px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.site-footer .links a:hover {
+  color: #aeb8ff !important;
+  transform: translateX(4px);
+}
+
+/* CONTACT */
+.site-footer .contact p {
+  margin: 0 0 10px !important;
+  font-size: 14px !important;
+  color: rgba(215, 221, 255, 0.88) !important;
+}
+
+/* SOCIALS */
+.site-footer .footer-socials {
+  display: flex !important;
+  gap: 12px !important;
+  margin-top: 14px !important;
+}
+
+.site-footer .footer-social {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 14px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+
+  text-decoration: none !important;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.site-footer .footer-social i {
+  color: #ffffff !important;
+  font-size: 20px !important;
+  line-height: 1 !important;
+  opacity: 0.95;
+}
+
+.site-footer .footer-social:hover {
+  transform: translateY(-3px);
+  background: rgba(174, 184, 255, 0.16) !important;
+  border-color: rgba(174, 184, 255, 0.28) !important;
+}
+
+/* BOTTOM SECTION */
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.10) !important;
+  padding: 18px 0 22px !important;
+  text-align: center !important;
+}
+
+.site-footer .footer-bottom p {
+  margin: 6px 0 !important;
+  font-size: 13px !important;
+  color: rgba(215, 221, 255, 0.70) !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .site-footer .footer-top .row {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+}
+
+.cbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all var(--transition-speed);
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.cbtn-primary {
+    background: #ff8e00;
+    color: var(--white);
+    border-color: #ff8e00;
+}
+
+.cbtn-primary:hover {
+    background: #e77f00;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px #ff8e0066;
+}
+
+.cbtn-hero {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+}
+
+.cbtn-text {
+    background: transparent;
+    color: var(--black);
+    border: none;
+    padding: 18px 20px;
+}
+
+.cbtn-text:hover {
+    color: #ff8e00;
+    gap: 15px;
+}
+
+.cbtn-secondary {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.cbtn-secondary:hover {
+    background: var(--white);
+    color: #ff8e00;
+    transform: translateY(-3px);
+}
+
+.cbtn-large {
+    padding: 20px 50px;
+    font-size: 1.2rem;
+}
+
+/* ===== CTA Section ===== */
+.cta-section {
+    background: linear-gradient(135deg, var(--black) 0%, #ff8e00 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--black) 0%, #ff8e00 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.c-section {
+    padding: 3.5rem 2.5rem;
+    text-align: center;
 }

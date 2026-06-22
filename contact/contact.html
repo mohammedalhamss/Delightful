@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delightful Istanbul</title>
+
+    <link rel="icon" type="image/png" href="../imgs/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="contact.css" />
+</head>
+
+
+<body>
+    <header class="navbar" id="navbar">
+        <div class="logo">
+            <div class="logo-container">
+                <a href="../index.html" class="unique">
+                    <img src="istanbul-aydin-university.png" alt="Istanbul Aydin University" class="logo-university">
+                </a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <!-- WINTER -->
+                <li class="dropdown">
+                    <a href="../winter/winter.html">WINTER</a>
+                    <div class="dropdown-menu">
+                        <a href="../winter/winter.html">Details of the program</a>
+                        <a href="../Courses/c_winter.html">Courses</a>
+                        <a href="../Accomodations/winter_acc/Accomodations.html">Accommodations</a>
+                        <a href="../Social-Acc/Social-w/WinterAcc.html">Social activity program</a>
+                        <a href="../Fees/Fees-w/Fees.html">Fees</a>
+                        <a href="../Application/Winter/Winterapp.html" class="apply-btn">Apply Now!</a>
+                    </div>
+                </li>
+
+                <!-- SPRING -->
+                <li class="dropdown">
+                    <a href="../spring/spring.html">SPRING</a>
+                    <div class="dropdown-menu">
+                        <a href="../spring/spring.html">Details of the program</a>
+                        <a href="../Courses/c_spring.html">Courses</a>
+                        <a href="../Accomodations/spring_acc/Accomodations.html">Accommodations</a>
+                        <a href="../Social-Acc/Social-sp/SpringAcc.html">Social activity program</a>
+                        <a href="../Fees/Fees-sp/Fees-sp.html">Fees</a>
+                        <a href="../Application/Spring/Springapp.html" class="apply-btn">Apply Now!</a>
+                    </div>
+                </li>
+
+                <!-- SUMMER -->
+                <li class="dropdown">
+                    <a href="../summer/summer.html">SUMMER</a>
+                    <div class="dropdown-menu">
+                        <a href="../summer/summer.html">Details of the program</a>
+                        <a href="../Courses/c_summer.html">Courses</a>
+                        <a href="../Accomodations/summer_acc/Accomodations.html">Accommodations</a>
+                        <a href="../Social-Acc/Social-su/SummerAcc.html">Social activity program</a>
+                        <a href="../Fees/Fees-su/Fees-su.html">Fees</a>
+                        <a href="../Application/Summer/Summerapp.html" class="apply-btn">Apply Now!</a>
+                    </div>
+                </li>
+
+                <!-- LATE SUMMER -->
+                <li class="dropdown">
+                    <a href="../summer/summer.html">LATE SUMMER</a>
+                    <div class="dropdown-menu">
+                        <a href="../summer/summer.html">Details of the program</a>
+                        <a href="../Courses/c_summer.html">Courses</a>
+                        <a href="../Accomodations/summer_acc/Accomodations.html">Accommodations</a>
+                        <a href="../Social-Acc/Social-su/SummerAcc.html">Social activity program</a>
+                        <a href="../Fees/Fees-su/Fees-su.html">Fees</a>
+                        <a href="../Application/Summer/Summerapp.html" class="apply-btn">Apply Now!</a>
+                    </div>
+                </li>
+
+                <!-- No dropdown items -->
+                <li><a href="#PRACTICAL">PRACTICAL INFORMATION</a></li>
+                <li><a href="../contact/contact.html">CONTACT US</a></li>
+
+            </ul>
+        </nav>
+
+        <div class="social-icons">
+            <a href="" target="_blank" class="social-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+            </a>
+            <a href="" target="_blank" class="social-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="02 ANA GİRİS.jpg" alt="Istanbul Skyline" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll">Get In Touch</div>
+            <h1 class="hero-title animate-on-scroll">Contact <span class="highlight">Us</span></h1>
+            <p class="hero-subtitle animate-on-scroll">Your journey toward turning thoughts into reality starts here.
+                Whether it's a partnership proposal, a curious question, or a friendly hello — we're excited to hear
+                from you.</p>
+            <a href="#coordinators" class="hero-cta animate-on-scroll">
+                <span>Contact Us</span>
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Quick Contact Cards -->
+    <section class="quick-contact" id="quick-contact">
+        <div class="container">
+            <div class="quick-cards">
+                <div class="quick-card animate-on-scroll" data-delay="0">
+                    <div class="quick-card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Drop us a line anytime</p>
+                    <a class="quick-card-link"><span class="__cf_email__"
+                            data-cfemail="a6c2c3cacfc1ced2c0d3cae6c7dfc2cfc888c3c2d388d2d4">delightful@aydin.edu.tr</span></a>
+                </div>
+                <div class="quick-card animate-on-scroll" data-delay="100">
+                    <div class="quick-card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>Come say hello</p>
+                    <span class="quick-card-link"><a href="#contact-form"> Istanbul Aydin University</a></span>
+                </div>
+                <div class="quick-card animate-on-scroll" data-delay="200">
+                    <div class="quick-card-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Follow Us</h3>
+                    <p>Stay connected</p>
+                    <div class="quick-card-socials">
+                        <a href="https://www.facebook.com/delightful.istanbul" target="_blank" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/delightful.istanbul" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coordinators Section -->
+    <section class="coordinators" id="coordinators" style="background-color:#f8f9fa;">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Our Team</span>
+                <h2 class="section-title">Program Coordinators</h2>
+                <p class="section-desc">Meet the people behind Delightful Istanbul who are ready to assist you on your
+                    journey.</p>
+            </div>
+            <div class="coordinator-cards">
+                <div class="coordinator-card animate-on-scroll" data-delay="0">
+
+                    <div class="coordinator-photo">
+                        <img src="Gurkan.jpeg" alt="Gürkan Donat">
+                    </div>
+
+                    <div class="coordinator-info">
+                        <h3>Gürkan Donat</h3>
+                        <span class="coordinator-role">Program Coordinator</span>
+
+                        <div class="coordinator-socials">
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="coordinator-card animate-on-scroll" data-delay="0">
+
+                    <div class="coordinator-photo">
+                        <img src="WhatsApp-Image-2023-03-22-at-08.11.44-2-980x1024-1.jpeg" alt="Gürkan Donat">
+                    </div>
+
+                    <div class="coordinator-info">
+                        <h3>Gürkan Donat</h3>
+                        <span class="coordinator-role">Program Coordinator</span>
+
+                        <div class="coordinator-socials">
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="coordinator-card animate-on-scroll" data-delay="0">
+
+                    <div class="coordinator-photo">
+                        <img src="OuOkGLfk.jpg" alt="Gürkan Donat">
+                    </div>
+
+                    <div class="coordinator-info">
+                        <h3>Gürkan Donat</h3>
+                        <span class="coordinator-role">Program Coordinator</span>
+
+                        <div class="coordinator-socials">
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map Section -->
+    <section class="contact-section" id="contact-form">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Find Us</span>
+                <h2 class="section-title">Our Location</h2>
+                <p class="section-desc">Visit us at Istanbul Aydin University. We'd love to welcome you in person.</p>
+            </div>
+            <div class="map-full-wrapper animate-on-scroll">
+                <div class="map-container-full">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.6504900907384!2d28.79497631541!3d40.99155297930!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5a0c9e0a9e7%3A0x8e0e3e1e1e1e1e1e!2sIstanbul%20Aydin%20University!5e0!3m2!1sen!2str!4v1700000000000!5m2!1sen!2str"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Istanbul Aydin University Location">
+                    </iframe>
+                </div>
+                <div class="map-info-full">
+                    <div class="map-info-item">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <strong>Istanbul Aydin University</strong>
+                            <p>Beşyol, İnönü Cd. No:38, 34295 Küçükçekmece/İstanbul</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-top container">
+            <div class="row">
+                <div class="col-md-4 footer-col about">
+                    <h4 class="boldText">Istanbul Aydin University - Delightful Program</h4>
+
+                    <p>Delightful Istanbul – Your ultimate guide to discovering the wonders of Istanbul. Experience the
+                        magic where East meets West.</p>
+                </div>
+                <div class="col-md-4 footer-col links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../winter/winter.html">Winter</a></li>
+                        <li><a href="../spring/spring.html">Spring</a></li>
+                        <li><a href="../summer/summer.html">Summer</a></li>
+                        <li><a href="../summer/summer.html">Late Summer</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-col contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@delightfulistanbul.com</p>
+                    <p>Phone: +90 123 456 7890</p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/delightful.istanbul?mibextid=ZbWKwL" target="_blank" class="footer-social footer-facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/accounts/login/?next=%2Fdelightful.istanbul&source=omni_redirect" target="_blank" class="footer-social footer-instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Delightful Istanbul. All rights reserved.</p>
+            <p>Made with ❤️ for travelers around the world</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="./contact.js"></script>
+
+</body>

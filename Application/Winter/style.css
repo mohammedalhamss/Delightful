@@ -137,72 +137,104 @@ body {
    DROPDOWN BASE
    ============================================ */
 .dropdown {
-    position: relative;
+  position: relative;
 }
 
 /* Dropdown container */
 .dropdown-menu {
-    position: absolute;
-    top: calc(100% + 5px);
-    left: 0;
-    background: white;
-    padding: 10px 0;
-    border-radius: 6px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    white-space: nowrap;
-    z-index: 2000;
+  position: absolute;
+  top: 100%;              /* ✅ remove the 5px gap */
+  left: 0;
+  margin-top: 5px;        /* ✅ visual spacing WITHOUT breaking hover */
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+  z-index: 2000;
 
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-    /* HIDDEN BY DEFAULT, BUT WITH TRANSITIONS */
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
-    /* when hiding: wait 1s before visibility changes */
-    transition:
-        opacity 0.25s ease 0.3s,
-        visibility 0s linear 0.3s;
+  /* ✅ smooth, but no delay */
+  transition: opacity 0.18s ease, visibility 0s linear 0.18s;
 }
 
 /* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-
-    /* when showing: no delay */
-    transition:
-        opacity 0.25s ease,
-        visibility 0s linear 0s;
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu { /* ✅ also works for keyboard/click */
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.18s ease, visibility 0s linear 0s;
 }
 
 /* Dropdown links */
 .dropdown-menu a {
-    font-size: 0.85rem;
-    color: #111;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 6px 15px;
-    position: relative;
+  font-size: 0.85rem;
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 15px;
+  position: relative;
 }
 
 /* hover underline */
 .dropdown-menu a::after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    background: #662483;
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    transition: 0.3s;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #662483;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
 }
 
 .dropdown-menu a:hover::after {
-    width: 100%;
+  width: 100%;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -8px;      /* bridge area above the menu */
+  height: 8px;
+}
+
+.dropdown-menu .apply-btn1{
+  display:block;
+  width:100%;
+  background:#662483;
+  color:#fff !important;
+  padding:8px 15px;
+  position:relative;
+}
+
+.dropdown-menu .apply-btn1::after{
+  content:'';
+  position:absolute;
+  width:0%;
+  height:2px;
+  background:white;
+  left:0;
+  bottom:2px;
+  transition:0.3s ease;
+}
+
+.dropdown-menu .apply-btn1:hover::after{
+  width:100%;
+}
+
+.dropdown-menu .apply-btn1:hover{
+  background:#662483;
+  color:#fff !important;
 }
 
 /* ===== New Hero Section ===== */
@@ -1946,3 +1978,144 @@ section {
     }
 }
 
+
+.site-footer {
+  background: #0c1220 !important;
+  color: #d7ddff !important;
+  padding: 0;
+}
+
+/* make sure footer container doesn't stretch weirdly */
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+/* TOP SECTION */
+.site-footer .footer-top {
+  padding: 56px 0 34px !important;
+}
+
+/* Kill any "row" flex overrides and use grid for clean columns */
+.site-footer .footer-top .row {
+  display: grid !important;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 34px !important;
+  align-items: start !important;
+  margin: 0 !important;
+}
+
+/* neutralize bootstrap column sizing/margins that might be broken */
+.site-footer .footer-col {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 0;
+}
+
+/* HEADINGS */
+.site-footer h4 {
+  margin: 0 0 14px !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2px;
+}
+
+/* ABOUT TEXT */
+.site-footer .about p {
+  margin: 0 !important;
+  color: rgba(215, 221, 255, 0.82) !important;
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+  max-width: 42ch;
+}
+
+/* LINKS */
+.site-footer .links ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.site-footer .links li {
+  margin: 0 0 10px !important;
+}
+
+.site-footer .links a {
+  color: rgba(215, 221, 255, 0.88) !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  display: inline-flex;
+  gap: 8px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.site-footer .links a:hover {
+  color: #aeb8ff !important;
+  transform: translateX(4px);
+}
+
+/* CONTACT */
+.site-footer .contact p {
+  margin: 0 0 10px !important;
+  font-size: 14px !important;
+  color: rgba(215, 221, 255, 0.88) !important;
+}
+
+/* SOCIALS */
+.site-footer .footer-socials {
+  display: flex !important;
+  gap: 12px !important;
+  margin-top: 14px !important;
+}
+
+.site-footer .footer-social {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 14px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+
+  text-decoration: none !important;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.site-footer .footer-social i {
+  color: #ffffff !important;
+  font-size: 20px !important;
+  line-height: 1 !important;
+  opacity: 0.95;
+}
+
+.site-footer .footer-social:hover {
+  transform: translateY(-3px);
+  background: rgba(174, 184, 255, 0.16) !important;
+  border-color: rgba(174, 184, 255, 0.28) !important;
+}
+
+/* BOTTOM SECTION */
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.10) !important;
+  padding: 18px 0 22px !important;
+  text-align: center !important;
+}
+
+.site-footer .footer-bottom p {
+  margin: 6px 0 !important;
+  font-size: 13px !important;
+  color: rgba(215, 221, 255, 0.70) !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .site-footer .footer-top .row {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+}
